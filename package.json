@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/saimondsf/api-aplication/issues"
   },
-  "homepage": "https://github.com/saimondsf/api-aplication#readme"
+  "homepage": "https://github.com/saimondsf/api-aplication#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
