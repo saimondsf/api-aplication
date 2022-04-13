@@ -8,15 +8,13 @@ app.listen('3000')
 // middleware
 app.use(express.json())
 
+let author = 'Saimon'
+
 app.route('/').get((req, res) => {
-    res.send('Hello')
+    res.send(author)
 })
 
-app.route('/about').get((req, res) => {
-    res.send('About')
-})
-
-app.route('/').post((req, res) => {
-    console.log(req.body)
-    res.send(req.body)
+app.route('/').put((req, res) => {
+    author = req.body
+    res.send(author)
 })
