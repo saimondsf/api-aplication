@@ -15,6 +15,6 @@ app.route('/').get((req, res) => {
 })
 
 app.route('/').put((req, res) => {
-    author = req.body
+    author = req.body.author
     res.send(author)
 })
