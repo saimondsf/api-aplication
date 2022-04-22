@@ -10,6 +10,11 @@ app.use(express.json())
 
 let author = 'Saimon'
 
+app.route('/:identificador').delete((req, res) => {
+    author = ''
+    res.send(req.params.identificador)
+})
+
 app.route('/').get((req, res) => {
     res.send(author)
 })
