@@ -8,18 +8,8 @@ app.listen('3000')
 // middleware
 app.use(express.json())
 
-let author = 'Saimon'
+app.route('/').get((req, res) => res.send(req.query.name))
 
-app.route('/:identificador').delete((req, res) => {
-    author = ''
-    res.send(req.params.identificador)
-})
+app.route('/').post((req, res) => res.send(req.body))
 
-app.route('/').get((req, res) => {
-    res.send(author)
-})
-
-app.route('/').put((req, res) => {
-    author = req.body.author
-    res.send(author)
-})
+app.route('/:parametro').get((req, res) => res.send(req.params.parametro))
