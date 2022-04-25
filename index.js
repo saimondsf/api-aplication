@@ -9,6 +9,5 @@ app.use(express.json())
 
 app.route('/').post((req, res) => {
     const { nome, cidade } = req.body
-    console.log(nome, cidade)
-    res.send(nome)
+    res.send(`O meu nome é ${nome} e minha cidade é ${cidade}`)
 })
