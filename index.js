@@ -8,7 +8,7 @@ app.listen('3000')
 app.use(express.json())
 
 app.route('/').post((req, res) => {
-    console.log(req.body)
-    // res.send(req.body)
-    res.send(req.body.name)
+    const { nome, cidade } = req.body
+    console.log(nome, cidade)
+    res.send(nome)
 })
